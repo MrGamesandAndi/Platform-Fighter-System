@@ -1,0 +1,5 @@
+res://characters/character_base.tscn
+res://scenes/stage_assets/ledge.tscn
+res://scenes/test.tscn
+res://scenes/hitbox.tscn
+res://scenes/flat_zone.tscn

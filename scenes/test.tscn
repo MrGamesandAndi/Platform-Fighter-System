@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqeoeuvtddr6r"]
+
+[ext_resource type="PackedScene" uid="uid://872li6c7mbig" path="res://characters/character_base.tscn" id="1_pe7i2"]
+[ext_resource type="PackedScene" uid="uid://6j3auwwchoix" path="res://scenes/stage_assets/ledge.tscn" id="2_xafkh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u7ep5"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_u7ep5")
+
+[node name="CharacterBase" parent="." instance=ExtResource("1_pe7i2")]
+position = Vector2(-53, -92)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBase"]
+position = Vector2(37, -21)
+
+[node name="Ledge2" parent="." instance=ExtResource("2_xafkh")]
+position = Vector2(45, -133.305)
+ledge_side = 1
+
+[node name="Ledge" parent="." instance=ExtResource("2_xafkh")]
+position = Vector2(-47, -133.305)
+
+[node name="CharacterBase2" parent="." instance=ExtResource("1_pe7i2")]
+position = Vector2(114, -47)
+id = 3
